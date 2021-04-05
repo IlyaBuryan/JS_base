@@ -39,11 +39,11 @@ while (i <= 100) {
 
 let shop = new Array();
 
-shop.push([1, "Banana", '2.50', 'some description']);
-shop.push([2, "Avocado", '3.50', 'some description']);
-shop.push([3, "Mango", '2.90', 'some description']);
-shop.push([4, "Strawberry", '1.80', 'some description']);
-shop.push([5, "Coconut", '1.55', 'some description']);
+shop.push([1, "Banana", 2.50, 'some description']);
+shop.push([2, "Avocado", 3.50, 'some description']);
+shop.push([3, "Mango", 2.90, 'some description']);
+shop.push([4, "Strawberry", 1.80, 'some description']);
+shop.push([5, "Coconut", 1.55, 'some description']);
 
 function countBasketPrice(arr) {
     let sum = 0;
