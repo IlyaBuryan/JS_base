@@ -53,7 +53,7 @@ const basket = {
     calc_price() {
         let total_price = 0;
         for (const i in this.items) {
-            total_price += +this.items[i].price;
+            total_price += this.items[i].price * this.items[i].quantity;
         } return total_price;
     }
 };
