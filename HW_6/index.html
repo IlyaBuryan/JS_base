@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lesson6.js" defer></script>
+
+    <style>
+        .catalog_item>img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .catalog_item>img:hover {
+            opacity: 0.5;
+            cursor: zoom-in;
+        }
+
+        .catalog_item {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-between;
+        }
+
+        .catalog_item:hover {
+            outline: 1px solid red;
+        }
+
+        .cat_list,
+        .basket_list {
+            display: flex;
+        }
+
+        .pict_window {
+            width: 100%;
+            height: 100%;
+            z-index: 101;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: grey;
+            background-color: rgba(137, 137, 145, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pict_window>img:last-child {
+            position: relative;
+            width: 90%;
+            max-height: 90%;
+            z-index: 103;
+            opacity: inherit;
+        }
+
+        .pict_window>img:first-child {
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="catalog">
+        <h1 style="text-align: center;">Совершите покупку в кателоге</h1>
+    </div>
+
+    <div id="basket">
+        <h1 style="text-align: center;">Ваша корзина</h1>
+    </div>
+</body>
+
+</html>
