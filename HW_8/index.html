@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="js.js" defer></script> -->
+    <script>
+        "use strict";
+
+        // Будет undefined потому что сначала произойдет поднятие var a.
+        // А значит к моменту проверки условия, переменная a будет уже существовать с неопределенным значением
+        // 1 не запишется в а, и при alert(a) значение останется undefined
+        // if (!("a" in window)) {
+        //     var a = 1;
+        // }
+        // alert(a);
+
+
+        // В данном случае а запускается не как функция, а как переменная, которая не определена. Поэтому будет ошибка.
+        // При function expression переменная b будет ссылаться на объект функции.
+        // var b = function a(x) {
+        //     x && a(--x);
+        // };
+        // alert(a);
+
+
+        // В данном случае сначала создастся переменная а. А потом при синтаксисе function declaration переменной а будет добавлена сслка на функцию.
+        // Поэтому на выходе текст функции.
+        // function a(x) {
+        //     return x * 2;
+        // }
+        // var a;
+        // alert(a);
+
+
+        // Замена 10 произщойдет только в объекте arguments. Переменная а продолжит ссылаться на 3. Поэтому результат - 3
+        // function b(x, y, a) {
+        //     arguments[2] = 10;
+        //     alert(a);
+        // }
+        // b(1, 2, 3);
+
+
+        // Функцией call задаем контекст. Для null это null
+        // function a() {
+        //     alert(this);
+        // }
+        // a.call(null);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
